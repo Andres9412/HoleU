@@ -1,1 +1,21 @@
+<mat-toolbar class="navigation" color="primary">
+  <mat-toolbar-row class="app-name">
+    <h1>Estudio compartido</h1>
+  </mat-toolbar-row>
+  <mat-toolbar-row class="navigation-config navigation-user">
+    <i class="material-icons account_circle">account_circle</i>
+    <h2>nombre usuario</h2>
+  </mat-toolbar-row>
+  <mat-toolbar-row class="navigation-config navigation-links">
+    <mat-list class="navigation-list" role="list">
+      <mat-list-item class="navigation-list-item" role="listitem">Mi horario</mat-list-item>
+      <mat-list-item class="navigation-list-item" role="listitem">Buscar compañero de estudio</mat-list-item>
+      <mat-list-item class="navigation-list-item" role="listitem">Horario de estudio compartido</mat-list-item>
+      <mat-list-item class="navigation-list-item" role="listitem">cerrar sesion</mat-list-item>
+    </mat-list>
+  </mat-toolbar-row>
+</mat-toolbar>
 
+<div class="main-container" >
+  <router-outlet ></router-outlet>
+</div>

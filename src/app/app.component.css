@@ -1,0 +1,39 @@
+.navigation{
+
+  background-color: var(--primaryColor);
+  color: var(--textandIcons);
+}
+.navigation-config{
+  margin-top: 15px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+.app-name{
+ background-color: var(--darkPrimariColor);
+ height: 40px;
+}
+
+.navigation h1{
+  padding: 5px;
+  text-align: center;
+  font-family: 'Berkshire Swash', cursive;
+  font-size: 30px;
+}
+.account_circle{
+  font-size: 100px;
+}
+.navigation-links{
+  background-color: #fafafa;
+  margin: 20px auto;
+  width: 90%;
+  height: calc( 100vh - 227px);
+  box-shadow: inset 10px 10px 15px -13px rgba(0,0,0,0.75);
+}
+.navigation-list{
+  width: 100%;
+}
+.navigation-list-item{
+  color: var(--primaryText);
+  border-bottom: 1px solid var(--dividerColor);
+}

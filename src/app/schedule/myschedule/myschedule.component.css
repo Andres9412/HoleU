@@ -1,0 +1,26 @@
+.myschedule{
+  padding-left: 20px;
+  margin: auto;
+}
+input[type="checkbox"]{
+  display: none;
+}
+
+label{
+  border: 1px solid #F8BBD0;
+  border-radius: 5px;
+  color: #F8BBD0;
+  width: 100px;
+  height: 20px;
+  display: inline-block;
+}
+
+input[type="checkbox"]:checked + label{
+  border: 1px solid var(--lightPrimariColor);
+  border-radius: 5px;
+  background-color: var(--lightPrimariColor);
+}
+.send{
+ background-color: var(--accentColor);
+ color: var(--textandIcons)
+}
