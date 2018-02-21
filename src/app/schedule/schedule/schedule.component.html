@@ -1,3 +1,209 @@
-<p>
-  schedule works!
-</p>
+<div class="ownSchedule-container">
+  <h2>Tu horario de tiempo libre</h2>
+  <table  class="ownSchedule">
+    <thead>
+      <tr>
+        <th>hora</th>
+        <th>lunes</th>
+        <th>martes</th>
+        <th>miercoles</th>
+        <th>jueves</th>
+        <th>viernes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th> 6:00 am </th>
+        <td *ngFor="let item of s6">
+          <div class="space" [ngClass]="{'space-free': item.available == true}" >
+
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <th>  </th>
+        <td *ngFor="let item of s6_5">
+          <div class="space" [ngClass]="{'space-free': item.available == true}">
+
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <th> 7:00 am </th>
+        <td *ngFor="let item of s7">
+          <div class="space" [ngClass]="{'space-free': item.available == true}">
+
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <th>  </th>
+        <td *ngFor="let item of s7_5">
+          <div class="space" [ngClass]="{'space-free': item.available == true}">
+
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <th> 8:00 am </th>
+        <td *ngFor="let item of s8">
+          <div class="space" [ngClass]="{'space-free': item.available == true}">
+
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <th>  </th>
+        <td *ngFor="let item of s8_5">
+          <div class="space" [ngClass]="{'space-free': item.available == true}">
+
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <th> 9:00 am </th>
+        <td *ngFor="let item of s9">
+          <div class="space" [ngClass]="{'space-free': item.available == true}">
+
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <th>  </th>
+        <td *ngFor="let item of s9_5">
+          <div class="space" [ngClass]="{'space-free': item.available == true}">
+
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <th> 10:00am </th>
+        <td *ngFor="let item of s10">
+          <div class="space" [ngClass]="{'space-free': item.available == true}">
+
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <th>  </th>
+        <td *ngFor="let item of s10_5">
+          <div class="space" [ngClass]="{'space-free': item.available == true}">
+
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <th> 11:00am </th>
+        <td *ngFor="let item of s11">
+          <div class="space" [ngClass]="{'space-free': item.available == true}">
+
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <th>  </th>
+        <td *ngFor="let item of s11_5">
+          <div class="space" [ngClass]="{'space-free': item.available == true}">
+
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <th> 12:00pm </th>
+        <td *ngFor="let item of s12">
+          <div class="space" [ngClass]="{'space-free': item.available == true}">
+
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <th>  </th>
+        <td *ngFor="let item of s12_5">
+          <div class="space" [ngClass]="{'space-free': item.available == true}">
+
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <th> 1:00 pm </th>
+        <td *ngFor="let item of s13">
+          <div class="space" [ngClass]="{'space-free': item.available == true}">
+
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <th>  </th>
+        <td *ngFor="let item of s13_5">
+          <div class="space" [ngClass]="{'space-free': item.available == true}">
+
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <th> 2:00 pm </th>
+        <td *ngFor="let item of s14">
+          <div class="space" [ngClass]="{'space-free': item.available == true}">
+
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <th>  </th>
+        <td *ngFor="let item of s14_5">
+          <div class="space" [ngClass]="{'space-free': item.available == true}">
+
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <th> 3:00 pm </th>
+        <td *ngFor="let item of s15">
+          <div class="space" [ngClass]="{'space-free': item.available == true}">
+
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <th>  </th>
+        <td *ngFor="let item of s15_5">
+          <div class="space" [ngClass]="{'space-free': item.available == true}">
+
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <th> 4:00 pm </th>
+        <td *ngFor="let item of s16">
+          <div class="space" [ngClass]="{'space-free': item.available == true}">
+
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <th>  </th>
+        <td *ngFor="let item of s16_5">
+          <div class="space" [ngClass]="{'space-free': item.available == true}">
+
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <th> 5:00 pm </th>
+        <td *ngFor="let item of s17">
+          <div class="space" [ngClass]="{'space-free': item.available == true}">
+
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <th>  </th>
+        <td *ngFor="let item of s17_5">
+          <div class="space" [ngClass]="{'space-free': item.available == true}">
+
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

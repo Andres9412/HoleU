@@ -4,11 +4,11 @@
 body{
   margin: 0;
   font-family: 'Roboto', sans-serif;
-  --darkPrimariColor: #303F9F;
-  --lightPrimariColor: #C5CAE9;
-  --primaryColor: #3F51B5;
+  --darkPrimariColor: #1976D2;
+  --lightPrimariColor: #BBDEFB;
+  --primaryColor: #2196F3;
   --textandIcons: #FFFFFF;
-  --accentColor: #448AFF;
+  --accentColor: #536DFE;
   --primaryText: #212121;
   --secondaryText: #757575;
   --dividerColor: #BDBDBD;
@@ -19,10 +19,14 @@ body{
   align-items: stretch;
 }
 .navigation{
-  width: 320px !important;
+  min-width: 320px !important;
+  max-width: 500px !important;
 }
 .main-container{
   flex: 1 1 auto;
   display: flex;
-
+}
+app-schedule{
+  width: 100%;
+  height: 100%;
 }

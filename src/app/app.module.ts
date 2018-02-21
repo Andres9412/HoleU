@@ -13,7 +13,10 @@ import { SignupComponent } from './auth/signup/signup.component';
 import { ScheduleComponent } from './schedule/schedule/schedule.component';
 
 //Routs
-import {Routing} from './app.routing';
+import { Routing } from './app.routing';
+
+//services
+import { ScheduleService } from './schedule/schedule.service';
 
 @NgModule({
   declarations: [
@@ -31,7 +34,9 @@ import {Routing} from './app.routing';
     ReactiveFormsModule,
     Routing
   ],
-  providers: [],
+  providers: [
+    ScheduleService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

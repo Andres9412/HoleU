@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { ScheduleService } from '../schedule.service';
 
 
 @Component({
@@ -13,26 +14,36 @@ export class MyscheduleComponent implements OnInit {
   scheduleDays: any =[]
   scheduleFull: any =[]
   i:number = 0
-  constructor() { }
+  constructor(
+    private _scheduleService:ScheduleService
+  ) { }
 
   ngOnInit() {
   }
   onSubmit(i){
-    console.log(i.value)
     this.scheduleAvailable = i.value;
     this.scheduleAvailable = Object.keys(this.scheduleAvailable).map((key) => {
       this.scheduleDays.push(key)
       return this.scheduleAvailable[key]
     });
-    this.fucion(this.scheduleAvailable)
+    this.combine(this.scheduleAvailable)
+    this._scheduleService.addSchedule(this.scheduleFull)
   }
-  fucion(schedule){
+  combine(schedule){
+
     for (let i = 0; i < this.scheduleDays.length; i++) {
         if(schedule[i] == ""){
           schedule[i] = false
         }
-      this.scheduleFull[i] = [this.scheduleDays[i],schedule[i]]
+      this.scheduleFull[i] = {day: this.scheduleDays[i],available:schedule[i]}
     }
+    console.log(this.scheduleFull)
+    // for (let i = 0; i < this.scheduleDays.length; i++) {
+    //     if(schedule[i] == ""){
+    //       schedule[i] = false
+    //     }
+    //   this.scheduleFull[i] = [this.scheduleDays[i],schedule[i]]
+    // }
 
   }
 }

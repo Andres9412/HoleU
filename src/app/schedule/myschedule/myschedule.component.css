@@ -1,6 +1,7 @@
 .myschedule{
   padding-left: 20px;
   margin: auto;
+  font-size: 20px;
 }
 input[type="checkbox"]{
   display: none;

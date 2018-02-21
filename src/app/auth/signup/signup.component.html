@@ -1,5 +1,5 @@
 <div class="signupContainer">
-  <div class="mat-container" *ngIf="!showSchedule">
+  <div class="mat-container" *ngIf="showSchedule">
     <mat-card>
       <h2>Registrate</h2>
       <form class="signForm" novalidate [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
@@ -23,10 +23,10 @@
             <mat-icon matSuffix (click)="hideCheck = !hideCheck">{{hideCheck ? 'visibility' : 'visibility_off' }}</mat-icon>
           </mat-form-field>
         </div>
-        <button type="submit" mat-raised-button color="accent">Registrarse</button>
+        <button type="submit" mat-raised-button color="primary">Registrarse</button>
         <p >¿Ya tienes cuenta? <a [routerLink]="['/signin']" mat-button >Inicia secion</a></p>
       </form>
     </mat-card>
   </div>
-  <app-myschedule *ngIf="showSchedule"></app-myschedule>
+  <app-myschedule class="myschedule" *ngIf="!showSchedule"></app-myschedule>
 </div>
