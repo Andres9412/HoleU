@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { ScheduleService } from '../../schedule/schedule.service';
 
 
 @Component({
@@ -16,7 +17,7 @@ export class SignupComponent implements OnInit {
   signUpForm:FormGroup;
 
   constructor(
-
+    private _scheduleService:ScheduleService
   ) { }
 
   ngOnInit() {
@@ -36,7 +37,7 @@ export class SignupComponent implements OnInit {
     //
     if(this.signUpForm.valid && this.signUpForm.value.password == this.signUpForm.value.passwordCheck ){
       const{firstName,lastName,email,password} = this.signUpForm.value;
-
+      
       this.passwordNotCheck = false;
       this.showSchedule= true;
     }

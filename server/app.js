@@ -1,10 +1,13 @@
 import express from 'express'
 import bodyParser from 'body-parser'
+import { schedule } from './routes'
+import formidable from 'express-formidable'
 
 const app = express()
 
+
 app.use(bodyParser.json())
-app.use(bodyParser.urlencoded({ extend: true}))
+app.use(bodyParser.urlencoded({ extended: true }))
 
 if (process.env.NODE_ENV === 'development') {
   app.use((req, res, next) => {
@@ -14,5 +17,6 @@ if (process.env.NODE_ENV === 'development') {
     next()
   })
 }
+app.use('/api/schedule', schedule)
 
 export default app

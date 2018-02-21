@@ -28,6 +28,7 @@ export class MyscheduleComponent implements OnInit {
     });
     this.combine(this.scheduleAvailable)
     this._scheduleService.addSchedule(this.scheduleFull)
+      .subscribe( res => console.log(res))
   }
   combine(schedule){
 
@@ -37,13 +38,5 @@ export class MyscheduleComponent implements OnInit {
         }
       this.scheduleFull[i] = {day: this.scheduleDays[i],available:schedule[i]}
     }
-    console.log(this.scheduleFull)
-    // for (let i = 0; i < this.scheduleDays.length; i++) {
-    //     if(schedule[i] == ""){
-    //       schedule[i] = false
-    //     }
-    //   this.scheduleFull[i] = [this.scheduleDays[i],schedule[i]]
-    // }
-
   }
 }

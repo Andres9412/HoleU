@@ -38,7 +38,11 @@ export class ScheduleComponent implements OnInit {
     private _scheduleService:ScheduleService
   ) {
     this.schedule = this._scheduleService.getOwnSchedule()
-    this.divide(this.schedule)
+      .subscribe(schedule => {
+        this.schedule = schedule
+        this.divide(this.schedule)
+      })
+
    }
 
   ngOnInit() {
